@@ -11,26 +11,39 @@ Anyone can become a store owner if they end up creating a storefront. Once an re
 A shopper logs into the app. everyone is shown the generic shopper application once the connection established between the user wallet and the contract. From the main page they can browse all of the products that have been listed by the store owners in the marketplace. They can see a list of products offered by the store. Shoppers can purchase a product, which will debit their account and send it to the store. The quantity of the item in the store’s inventory will be reduced by the appropriate amount.
 
 ## How to set it up
-1. Run the development console from the terminal.
+0. Clone the repo:
+
+    ```shell
+    git clone https://github.com/kennychung/Marketplace.git
+    cd Marketplace
+    ```
+    
+1. Install the Truffle toolkit globally and install project dependencies:
+
+    ```shell
+    npm install -g truffle && npm install
+    ```
+
+2. Run the development console from the terminal.
     ```javascript
     truffle develop
     ```
    - Make sure that Truffle Develop started at http://127.0.0.1:9549 or the address configured in Ganache CLI
 
-2. Compile and migrate the smart contracts. Note inside the development console we don't preface commands with `truffle`.
+3. Compile and migrate the smart contracts. Note inside the development console we don't preface commands with `truffle`.
     ```javascript
     compile
     migrate
     ```
     - Make sure that you receive contract addresses after successfully migrating the contracts locally
 
-3. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
+4. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
     ```javascript
     // Serves the front-end on http://localhost:3000
     npm run start
     ```
     
-4. Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
+5. Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
     ```javascript
     // If inside the development console.
     test
