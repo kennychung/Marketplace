@@ -322,7 +322,7 @@ class App extends Component {
       storeOwner,
       {from: this.state.myAddress,
         value: this.state.web3.toWei(price, 'ether'), 
-        gas: 52388,
+        gas: 652388,
         gasPrice: 100000000000}).then(results => {
           console.log('results',results);
           if (results['tx']){
