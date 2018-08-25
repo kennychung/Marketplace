@@ -1,9 +1,9 @@
 ## What does your project do?
-Online Marketplace
+### Decentralized Marketplace
 
 The central marketplace is managed by a group of administrators. Admins allow store owners to add stores to the marketplace. Store owners can manage their store’s inventory and funds. Shoppers can visit stores and purchase goods that are in stock using ETH. 
  
-User Stories:
+## User Stories:
 An administrator opens the web app. The web app reads the address and identifies that the user is an admin under the admin page, showing them admin only functions, such as adding new admins (Only Owner can add new owners) or admin-only functions via web or direct contract call.
  
 Anyone can become a store owner if they end up creating a storefront. Once an regular shopper logs into the app and create a store, they will become a store owner while being a shopper. Store owner can create only one store per address. The web app recognizes their address and identifies them as a store owner if they access store management page. They can create a new storefront that will be displayed on the marketplace. They can also see the storefronts that they have already created. They can add products to the storefront or change any of the products’ prices from the product management page. They can also withdraw any funds that the store has collected from sales from the store management page. 
@@ -11,23 +11,26 @@ Anyone can become a store owner if they end up creating a storefront. Once an re
 A shopper logs into the app. everyone is shown the generic shopper application once the connection established between the user wallet and the contract. From the main page they can browse all of the products that have been listed by the store owners in the marketplace. They can see a list of products offered by the store. Shoppers can purchase a product, which will debit their account and send it to the store. The quantity of the item in the store’s inventory will be reduced by the appropriate amount.
 
 ## How to set it up
-3. Run the development console from the terminal.
+1. Run the development console from the terminal.
     ```javascript
     truffle develop
     ```
-//Make sure that Truffle Develop started at http://127.0.0.1:9549 or the address configured in Ganache CLI
-4. Compile and migrate the smart contracts. Note inside the development console we don't preface commands with `truffle`.
+   - Make sure that Truffle Develop started at http://127.0.0.1:9549 or the address configured in Ganache CLI
+
+2. Compile and migrate the smart contracts. Note inside the development console we don't preface commands with `truffle`.
     ```javascript
     compile
     migrate
     ```
-//Make sure that you receive contract addresses after successfully migrating the contracts locally
-5. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
+    - Make sure that you receive contract addresses after successfully migrating the contracts locally
+
+3. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
     ```javascript
     // Serves the front-end on http://localhost:3000
     npm run start
     ```
-6. Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
+    
+4. Truffle can run tests written in Solidity or JavaScript against your smart contracts. Note the command varies slightly if you're in or outside of the development console.
     ```javascript
     // If inside the development console.
     test
@@ -35,14 +38,14 @@ A shopper logs into the app. everyone is shown the generic shopper application o
     // If outside the development console..
     truffle test
     ```
-//Warnings are thrown due to the SafeMath library
-//All test cases should pass 
+	- Warning messages are thrown due to the SafeMath library
+	- All test cases should pass 
 
 ## Libraries used by EthPM package manager
-Safemath has been imported by using EthPM package manager
+- Safemath has been imported by using EthPM package manager
 
 ## Security Tools / Common Attacks
-### Explain what measures you’ve taken to ensure that your contracts are not susceptible to common attacks
+** Explain what measures you’ve taken to ensure that your contracts are not susceptible to common attacks**
 Since smart contracts are immutable and once they are deployed, the code cannot be updated or fix any discovered bugs. I've decided to aplly the following functions and checked some of the items to ensure that the contract doesn't fall into any popular pitfalls.
 1. OpenZepplin's SafeMath library has been used to prevent any risks by overflow or underflow.
 2. Since public calls can be called by anyone, I tried to minimize the # of public functions used in the contract. Also some modifiers are created to have some type of permission levels to access the functions by the various users involved in function calls.
@@ -52,8 +55,8 @@ Since smart contracts are immutable and once they are deployed, the code cannot 
 6. Lastly, I ended up not using any loops that do not have a fixed number of iterations. If the # of iterations in a loop is high and it grows beyond the block gas limit, it is possible that the contract could be stalled at a certain point.
 
 # Extra Assignmeents
-## 1. ENS Donation Jar
-I've created "kenny.etherbase.eth" to meet the additional requirements.
+** 1. ENS Donation Jar**
+- I've created "kenny.etherbase.eth" to meet the additional requirements.
 
-## 2. deployed contracts on the rinkeby testnet
-The addresses provided in deployed_addresses.txt
+** 2. deployed contracts on the rinkeby testnet **
+- The addresses provided in deployed_addresses.txt
