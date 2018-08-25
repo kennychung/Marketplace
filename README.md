@@ -28,7 +28,7 @@ A shopper logs into the app. everyone is shown the generic shopper application o
     ```javascript
     truffle develop
     ```
-   - Make sure that Truffle Develop started at http://127.0.0.1:9549 or the address configured in Ganache CLI
+   - Make sure that Truffle Develop started at http://127.0.0.1:9545 or the address configured in Ganache CLI
 
 3. Compile and migrate the smart contracts. Note inside the development console we don't preface commands with `truffle`.
     ```javascript
@@ -53,6 +53,15 @@ A shopper logs into the app. everyone is shown the generic shopper application o
     ```
 	- Warning messages are thrown due to the SafeMath library
 	- All test cases should pass 
+
+Local - Make sure that your Metamask is connected to http://127.0.0.1:9545 or the address configured in Ganache CLI. 
+   - **Note** - Make sure that you reset your account on Metamask when you have a problem connecting to the local server
+
+Rinkeby - Rinkeby contract can be accessed by unzipping the JSONs from contract.zip to "build/contracts" folder
+   - **Note** - Since I didn't get a chance to display loading animation while the transaction is being populated, please wait until you receive a pop-up message for the TX population message and refresh the page after the TX has been confirmed. 
+   - The Rinkeby contract addresses provided in deployed_addresses.txt
+
+
 
 ## Libraries used by EthPM package manager
 - Safemath has been imported by using EthPM package manager
