@@ -56,12 +56,9 @@ A shopper logs into the app. everyone is shown the generic shopper application o
 
 Local - Make sure that your Metamask is connected to http://127.0.0.1:9545 or the address configured in Ganache CLI. 
    - **Note** - Make sure that you reset your account on Metamask when you have a problem connecting to the local server
-
-Rinkeby - Rinkeby contract can be accessed by unzipping rinkeby_contract_json.zip to "build/contracts" folder
    - **Note** - Since I didn't get a chance to display loading animation while the transaction is being populated, please wait until you receive a pop-up message for the TX population message and refresh the page after the TX has been confirmed. 
-   - The Rinkeby contract addresses provided in deployed_addresses.txt
 
-
+Rinkeby - The Rinkeby contract addresses provided in deployed_addresses.txt
 
 ## Libraries used by EthPM package manager
 - Safemath has been imported by using EthPM package manager
